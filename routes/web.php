@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::view('home', 'home')->name('home');
+    Route::view('dashboard', 'dashboard.index')->name('dashboard');
 });
