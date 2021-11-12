@@ -27,8 +27,8 @@ class Wallet extends Model
 {
     use HasFactory;
 
-    public function user()
+    public function users()
     {
-        $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class);
     }
 }

@@ -77,6 +77,6 @@ class User extends Authenticatable
 
     public function wallets()
     {
-        $this->belongsToMany(Wallet::class);
+        return $this->belongsToMany(Wallet::class);
     }
 }

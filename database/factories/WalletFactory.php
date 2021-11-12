@@ -14,7 +14,7 @@ class WalletFactory extends Factory
     {
         return [
             'name' => $this->faker->company,
-            'short_name' => $this->faker->text(3),
+            'short_name' => $this->faker->text(5),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

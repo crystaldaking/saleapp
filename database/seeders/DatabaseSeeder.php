@@ -14,6 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call([
+            UserSeeder::class,
+            WalletSeeder::class,
+            ModelRelationSeeder::class
+        ]);
+
         User::factory()->create(
             ['email' => 'dev@tass.by']
         );

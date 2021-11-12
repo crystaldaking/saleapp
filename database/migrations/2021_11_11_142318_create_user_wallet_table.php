@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserWalletsTable extends Migration
+class CreateUserWalletTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateUserWalletsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_wallets', function (Blueprint $table) {
+        Schema::create('user_wallet', function (Blueprint $table) {
             $table->id();
-            $table->string('address');
-            $table->decimal('balance',12);
+            $table->string('address')->nullable();
+            $table->decimal('balance',12)->default(0);
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('wallet_id')->references('id')->on('wallets')->onDelete('cascade');
             $table->timestamps();
