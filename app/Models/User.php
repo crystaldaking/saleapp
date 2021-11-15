@@ -77,6 +77,7 @@ class User extends Authenticatable
 
     public function wallets()
     {
-        return $this->belongsToMany(Wallet::class);
+        return $this->belongsToMany(Wallet::class)
+            ->withPivot(['balance','address']);
     }
 }
