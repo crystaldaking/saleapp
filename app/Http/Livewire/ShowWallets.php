@@ -10,11 +10,14 @@ class ShowWallets extends Component
 {
     public User $user;
     public Collection $wallets;
-    public float $totalBalance;
+    public float $totalBalance = 0;
 
     public function render()
     {
         $this->wallets = $this->user->wallets;
+        $this->user->wallets()->each(function ($wallet) {
+            $this->totalBalance += $wallet->pivot->balance;
+        });
         return view('livewire.show-wallets');
     }
 }

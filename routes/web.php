@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard.index')->name('dashboard');
+    Route::view('tokens','token.index')->name('tokens');
 });

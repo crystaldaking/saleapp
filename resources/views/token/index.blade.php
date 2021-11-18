@@ -9,11 +9,15 @@
 <div class="preloader"></div>
 
 <div class="wrapper">
+
     <header class="header">
+
         <div class="inner-col">
+
             <a href="" class="mobile-logo d-md-none">
                 <img src="img/logo.png" alt="">
             </a>
+
             <div class="btn-menu btn-menu--left">
                 <div></div>
                 <div></div>
@@ -22,7 +26,7 @@
 
             <form class="search">
 					<span class="search__icon">
-						<img src="img/search-white.svg" alt="">
+						<img src="img/search.png" alt="">
 					</span>
                 <input class="search__input" type="text" placeholder="Search">
             </form>
@@ -30,6 +34,7 @@
 
 
         <div class="inner-row align-right">
+
 
             <div class="d-none d-md-block">
                 <div class="user">
@@ -43,7 +48,6 @@
                         Alex Bolden
                     </p>
                     <ul class="user-menu">
-
                         <li class="user-menu__item">
                             <a href="" class="user-menu__link">
 									<span class="user-menu__icon">
@@ -101,6 +105,7 @@
         </div>
 
     </header>
+
 
     <div class="content">
         <aside class="sidebar">
@@ -196,138 +201,13 @@
             </div>
 
             <div class="copyright">
-                © 2021 Crypterium
+                © 2018 Crypterium
             </div>
 
         </aside>
 
         <main class="main-content">
-            @livewire('show-wallets',['user' => auth()->user()])
-
-            <section class="transactions">
-                <h3>Active now</h3>
-
-                <div class="transactions__list">
-                    <div class="transaction">
-
-                        <div class="transaction__header transaction__header--five-cols">
-                            <div class="transaction__data">
-                                June 26
-                            </div>
-
-                            <div class="transaction__currency">
-                                <img   class="icon_tokin_sale" src="img/clover.png"  alt="">
-                                Clover Sale Registration Now Open
-                            </div>
-
-                            <div class="transaction__info">
-
-                                Registration Open Now · Sale Begins April 20 · US, Canada, China excluded
-                            </div>
-
-                            <div  class="buy_btn_blue learn_more_tokin_div" >
-                                <a  style="color: #ffffff;" href="" class="">View</a>
-                            </div>
-                            <div  class="buy_btn_green learn_more_tokin_div " >
-                                <a  href="token_sales.html" class="learn_more_tokin ">Order</a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="transaction__header transaction__header--five-cols">
-                            <div class="transaction__data">
-                                June 26
-                            </div>
-
-                            <div class="transaction__currency">
-                                <img   class="icon_tokin_sale" src="img/clover.png"  alt="">
-                                Clover Sale Registration Now Open
-                            </div>
-
-                            <div class="transaction__info">
-
-                                Registration Open Now · Sale Begins April 20 · US, Canada, China excluded
-                            </div>
-
-                            <div  class="buy_btn_blue learn_more_tokin_div" >
-                                <a  href="" class="learn_more_tokin">View</a>
-
-                            </div>
-                            <div  class="buy_btn_green learn_more_tokin_div" >
-                                <a  href="token_sales.html" class="learn_more_tokin">Order</a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- <a href="" class="btn btn--blue">All transactions</a> -->
-            </section>
-
-            <!-- past activ -->
-
-            <section class="transactions">
-                <h3>Past sales</h3>
-
-                <div class="transactions__list">
-                    <div class="transaction">
-
-                        <div class="transaction__header transaction__header--five-cols">
-                            <div class="transaction__data">
-                                June 26
-                            </div>
-
-                            <div class="transaction__currency">
-                                <img   class="icon_tokin_sale" src="img/clover.png"  alt="">
-                                Clover Sale Registration Now Open
-                            </div>
-
-                            <div class="transaction__info">
-
-                                Registration Open Now · Sale Begins April 20 · US, Canada, China excluded
-                            </div>
-
-                            <div  class="buy_btn_blue learn_more_tokin_div" >
-                                <a  style="color: #ffffff;" href="" class="">View</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="transaction__header transaction__header--five-cols">
-                            <div class="transaction__data">
-                                June 26
-                            </div>
-
-                            <div class="transaction__currency">
-                                <img   class="icon_tokin_sale" src="img/clover.png"  alt="">
-                                Clover Sale Registration Now Open
-                            </div>
-
-                            <div class="transaction__info">
-
-                                Registration Open Now · Sale Begins April 20 · US, Canada, China excluded
-                            </div>
-
-                            <div  class="buy_btn_blue learn_more_tokin_div" >
-                                <a  href="" class="learn_more_tokin">View</a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- <a href="" class="btn btn--blue">All transactions</a> -->
-            </section>
-
-
+            @livewire('token-sales',['user' => auth()->user()])
         </main>
     </div>
 
@@ -335,28 +215,69 @@
 
 <div class="d-none">
 
-    <form class="popup popup-add-wallet zoom-anim-dialog" id="add-wallet">
+    <form class="popup popup-sent-currency zoom-anim-dialog form" id="sent-currency">
         <div class="popup__content">
 
-
             <img class="popup-add-wallet__img" src="img/popup-add-wallet-icon.png" alt="">
-            <!-- <h3>Add new wallet</h3> -->
-            <h3>Coming soon</h3>
-            <!-- <div class="popup-add-wallet__row">
+            <h3 class="form__title">Send BTC</h3>
 
+            <div class="form__row">
                 <div class="input-wrap">
-                    <input type="text"  placeholder="Name wallet">
+                    <input type="text" placeholder="Enter a BTC adress">
                 </div>
-
-                <select class="custom-select">
-                    <option value="Bitcoin">Bitcoin</option>
-                    <option value="Ethereum">Ethereum</option>
-                    <option value="Litecoin">Litecoin</option>
-                </select>
-
             </div>
 
-            <button class="btn btn--blue btn--full">Add new wallet</button> -->
+            <label class="form__label">Withdraw From</label>
+            <div class="form__row">
+                <select class="custom-select">
+                    <option value="Bitcoin">Bitcoin wallet</option>
+                    <option value="Ethereum">Ethereum wallet</option>
+                    <option value="Litecoin">Litecoin wallet</option>
+                </select>
+            </div>
+
+            <label class="form__label">Amount</label>
+            <div class="form__row">
+                <div class="input-wrap input-wrap--50">
+                    <input type="text" value="0.00">
+                    <label class="input-wrap__label">USD</label>
+                </div>
+                <div class="input-wrap input-wrap--50">
+                    <input type="text" value="0.00">
+                    <label class="input-wrap__label">BTC</label>
+                </div>
+            </div>
+
+            <label class="form__label">Note</label>
+            <div class="form__row">
+                <div class="input-wrap">
+                    <input type="text" placeholder="Write an optional message">
+                </div>
+            </div>
+
+            <button class="btn btn--blue btn--full">Continue</button>
+        </div>
+        <div class="popup__thanks">
+            <img src="img/popup-success.png" alt="">
+            <h3>Your wallet added successful!</h3>
+        </div>
+    </form>
+
+    <form class="popup popup-confirmation zoom-anim-dialog form" id="confirmation">
+        <div class="popup__content">
+
+            <img class="popup-add-wallet__img" src="img/confirmation-icon.png" alt="">
+            <h3 class="form__title">Confirmation</h3>
+
+            <label class="form__label">Autontification code:</label>
+            <div class="form__row">
+                <div class="input-wrap">
+                    <input type="text" placeholder="Enter code">
+                </div>
+                <img class="popup-confirmation__qr-code" src="img/qr-code.svg" alt="">
+            </div>
+
+            <button class="btn btn--blue btn--full">Send</button>
         </div>
         <div class="popup__thanks">
             <img src="img/popup-success.png" alt="">
@@ -365,7 +286,6 @@
     </form>
 
 </div>
-
 @include('chunks.scripts')
 </body>
 </html>

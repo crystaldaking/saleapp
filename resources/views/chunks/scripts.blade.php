@@ -25,4 +25,5 @@
 
     isTouch ? _html.classList.add("touch") : _html.classList.add("no-touch");
 </script>
-<script type="text/javascript" src="{{asset('js/device.min.js')}}"></script>
+{{--<script type="text/javascript" src="{{asset('js/device.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/scripts.min.js')}}"></script>--}}

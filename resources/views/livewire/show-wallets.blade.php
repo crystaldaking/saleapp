@@ -1,5 +1,5 @@
 <section class="wallets">
-    <h2>Total Balance, $: 248 </h2>
+    <h2>Total Balance, $: {{$totalBalance}} </h2>
     <div class="wallets__list">
         <!-- Wallets-->
         @foreach($wallets as $wallet)

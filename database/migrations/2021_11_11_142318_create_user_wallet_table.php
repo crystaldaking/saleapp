@@ -17,6 +17,7 @@ class CreateUserWalletTable extends Migration
             $table->id();
             $table->string('address')->nullable();
             $table->decimal('balance',12)->default(0);
+            $table->string('name')->nullable();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('wallet_id')->references('id')->on('wallets')->onDelete('cascade');
             $table->timestamps();

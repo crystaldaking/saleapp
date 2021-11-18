@@ -16025,6 +16025,322 @@
      
 }
 
+    namespace Filament { 
+            /**
+     * 
+     *
+     * @see \Filament\FilamentManager
+     */ 
+        class Filament {
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function auth()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->auth();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function avatarProvider()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->avatarProvider();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function can($action, $target)
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->can($action, $target);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getAuthorizations()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->getAuthorizations();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getPages()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->getPages();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getResources()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->getResources();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getRoles()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->getRoles();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getScriptData()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->getScriptData();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getScripts()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->getScripts();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getStyles()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->getStyles();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getWidgets()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->getWidgets();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function ignoreMigrations()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->ignoreMigrations();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function provideToScript($variables)
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->provideToScript($variables);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function registerAuthorizations($target, $authorizations = [])
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->registerAuthorizations($target, $authorizations);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function registerPage($page)
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->registerPage($page);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function registerResource($resource)
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->registerResource($resource);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function registerRole($role)
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->registerRole($role);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function registerScript($name, $path)
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->registerScript($name, $path);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function registerStyle($name, $path)
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->registerStyle($name, $path);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function registerWidget($widget)
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->registerWidget($widget);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function serving($callback)
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->serving($callback);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function shouldRunMigrations()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->shouldRunMigrations();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function userResource()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->userResource();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function version()
+        {
+                        /** @var \Filament\FilamentManager $instance */
+                        return $instance->version();
+        }
+         
+    }
+     
+}
+
+    namespace Intervention\Image\Facades { 
+            /**
+     * 
+     *
+     */ 
+        class Image {
+                    /**
+         * Overrides configuration settings
+         *
+         * @param array $config
+         * @return self 
+         * @static 
+         */ 
+        public static function configure($config = [])
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->configure($config);
+        }
+                    /**
+         * Initiates an Image instance from different input types
+         *
+         * @param mixed $data
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function make($data)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->make($data);
+        }
+                    /**
+         * Creates an empty image canvas
+         *
+         * @param int $width
+         * @param int $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function canvas($width, $height, $background = null)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->canvas($width, $height, $background);
+        }
+                    /**
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
+         *
+         * @param \Closure $callback
+         * @param int $lifetime
+         * @param boolean $returnObj
+         * @return \Image 
+         * @static 
+         */ 
+        public static function cache($callback, $lifetime = null, $returnObj = false)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->cache($callback, $lifetime, $returnObj);
+        }
+         
+    }
+     
+}
+
     namespace Livewire { 
             /**
      * 
@@ -16351,6 +16667,201 @@
         {
                         /** @var \Livewire\LivewireManager $instance */
                         return $instance->flushState();
+        }
+         
+    }
+     
+}
+
+    namespace Thomaswelton\LaravelGravatar\Facades { 
+            /**
+     * 
+     *
+     */ 
+        class Gravatar {
+                    /**
+         * Return the URL of a Gravatar. Note: it does not check for the existence of this Gravatar.
+         *
+         * @param string $email The email address.
+         * @param int $size Override the size of the Gravatar.
+         * @param null|string $rating Override the default rating if you want to.
+         * @return string The URL of the Gravatar.
+         * @static 
+         */ 
+        public static function src($email, $size = null, $rating = null)
+        {
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->src($email, $size, $rating);
+        }
+                    /**
+         * Return the code of HTML image for a Gravatar.
+         *
+         * @param string $email The email address.
+         * @param string $alt The alt attribute for the image.
+         * @param array $attributes Override the 'height' and the 'width' of the image if you want.
+         * @param null|string $rating Override the default rating if you want to.
+         * @return string The code of the HTML image.
+         * @static 
+         */ 
+        public static function image($email, $alt = null, $attributes = [], $rating = null)
+        {
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->image($email, $alt, $attributes, $rating);
+        }
+                    /**
+         * Check if a Gravatar image exists.
+         *
+         * @param string $email The email address.
+         * @return bool True if the Gravatar exists, false otherwise.
+         * @static 
+         */ 
+        public static function exists($email)
+        {
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->exists($email);
+        }
+                    /**
+         * Get the currently set avatar size.
+         *
+         * @return integer - The current avatar size in use.
+         * @static 
+         */ 
+        public static function getAvatarSize()
+        {            //Method inherited from \thomaswelton\GravatarLib\Gravatar         
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->getAvatarSize();
+        }
+                    /**
+         * Set the avatar size to use.
+         *
+         * @param integer $size - The avatar size to use, must be less than 512 and greater than 0.
+         * @return \thomaswelton\GravatarLib\Gravatar - Provides a fluent interface.
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function setAvatarSize($size)
+        {            //Method inherited from \thomaswelton\GravatarLib\Gravatar         
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->setAvatarSize($size);
+        }
+                    /**
+         * Get the current default image setting.
+         *
+         * @return mixed - False if no default image set, string if one is set.
+         * @static 
+         */ 
+        public static function getDefaultImage()
+        {            //Method inherited from \thomaswelton\GravatarLib\Gravatar         
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->getDefaultImage();
+        }
+                    /**
+         * Set the default image to use for avatars.
+         *
+         * @param mixed $image - The default image to use. Use boolean false for the gravatar default, a string containing a valid image URL, or a string specifying a recognized gravatar "default".
+         * @return \thomaswelton\GravatarLib\Gravatar - Provides a fluent interface.
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function setDefaultImage($image)
+        {            //Method inherited from \thomaswelton\GravatarLib\Gravatar         
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->setDefaultImage($image);
+        }
+                    /**
+         * Get the current maximum allowed rating for avatars.
+         *
+         * @return string - The string representing the current maximum allowed rating ('g', 'pg', 'r', 'x').
+         * @static 
+         */ 
+        public static function getMaxRating()
+        {            //Method inherited from \thomaswelton\GravatarLib\Gravatar         
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->getMaxRating();
+        }
+                    /**
+         * Set the maximum allowed rating for avatars.
+         *
+         * @param string $rating - The maximum rating to use for avatars ('g', 'pg', 'r', 'x').
+         * @return \thomaswelton\GravatarLib\Gravatar - Provides a fluent interface.
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function setMaxRating($rating)
+        {            //Method inherited from \thomaswelton\GravatarLib\Gravatar         
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->setMaxRating($rating);
+        }
+                    /**
+         * Check if we are using the secure protocol for the image URLs.
+         *
+         * @return boolean - Are we supposed to use the secure protocol?
+         * @static 
+         */ 
+        public static function usingSecureImages()
+        {            //Method inherited from \thomaswelton\GravatarLib\Gravatar         
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->usingSecureImages();
+        }
+                    /**
+         * Enable the use of the secure protocol for image URLs.
+         *
+         * @return \thomaswelton\GravatarLib\Gravatar - Provides a fluent interface.
+         * @static 
+         */ 
+        public static function enableSecureImages()
+        {            //Method inherited from \thomaswelton\GravatarLib\Gravatar         
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->enableSecureImages();
+        }
+                    /**
+         * Disable the use of the secure protocol for image URLs.
+         *
+         * @return \thomaswelton\GravatarLib\Gravatar - Provides a fluent interface.
+         * @static 
+         */ 
+        public static function disableSecureImages()
+        {            //Method inherited from \thomaswelton\GravatarLib\Gravatar         
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->disableSecureImages();
+        }
+                    /**
+         * Build the avatar URL based on the provided email address.
+         *
+         * @param string $email - The email to get the gravatar for.
+         * @param string $hash_email - Should we hash the $email variable?  (Useful if the email address has a hash stored already)
+         * @return string - The XHTML-safe URL to the gravatar.
+         * @static 
+         */ 
+        public static function buildGravatarURL($email, $hash_email = true)
+        {            //Method inherited from \thomaswelton\GravatarLib\Gravatar         
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->buildGravatarURL($email, $hash_email);
+        }
+                    /**
+         * Get the email hash to use (after cleaning the string).
+         *
+         * @param string $email - The email to get the hash for.
+         * @return string - The hashed form of the email, post cleaning.
+         * @static 
+         */ 
+        public static function getEmailHash($email)
+        {            //Method inherited from \thomaswelton\GravatarLib\Gravatar         
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->getEmailHash($email);
+        }
+                    /**
+         * 
+         * 
+         * ...Yeah, it's just an alias of buildGravatarURL.  This is just to make it easier to use as a twig asset.
+         *
+         * @see \thomaswelton\GravatarLib\Gravatar::buildGravatarURL()
+         * @static 
+         */ 
+        public static function get($email, $hash_email = true)
+        {            //Method inherited from \thomaswelton\GravatarLib\Gravatar         
+                        /** @var \Thomaswelton\LaravelGravatar\Gravatar $instance */
+                        return $instance->get($email, $hash_email);
         }
          
     }
@@ -19986,7 +20497,10 @@ namespace  {
             class Validator extends \Illuminate\Support\Facades\Validator {}
             class View extends \Illuminate\Support\Facades\View {}
             class Flare extends \Facade\Ignition\Facades\Flare {}
+            class FilamentManager extends \Filament\Filament {}
+            class Image extends \Intervention\Image\Facades\Image {}
             class Livewire extends \Livewire\Livewire {}
+            class Gravatar extends \Thomaswelton\LaravelGravatar\Facades\Gravatar {}
      
 }
 
