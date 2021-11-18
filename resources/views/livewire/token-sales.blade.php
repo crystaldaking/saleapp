@@ -39,16 +39,15 @@
 
                                 </span>
             </div>
-
             <div class="wallet-inner__chart">
                 <h3>Invoice Order</h3>
                 <div class="chart">
                         <div class="form__row">
-
                             <div class="form__col-xl">
                                 <label class="form__label">I give an order to buy a token</label>
                                 <label>
-                                    <select class="custom-select">
+                                    <select id="selectedTokenId" wire:model="selectedTokenId" class="custom-select">
+                                        <option>Select Token</option>
                                         @foreach($tokens as $token)
                                             <option value="{{$token->id}}">{{$token->name}}</option>
                                         @endforeach
@@ -73,33 +72,31 @@
                         </p>
                         <button wire:click="confirm()" class="btn btn--green">Сonfirm the order</button>
                 </div>
-
             </div>
         </div>
         <div class="wallet-inner__col">
             <section class="transactions">
                 <h3>Your orders </h3>
-
                 <div class="transactions__list">
-                    <div class="transaction ">
-
+                    @foreach($orders as $order)
+                        <div class="transaction">
                         <div class="transaction__header transaction__header--three-cols">
                             <div class="transaction__data">
-                                June 26, 2020
+                                {{$order->order_time}}
                             </div>
 
                             <div class="transaction__info">
                                 <img   class="icon_tokin_sale" src="img/clover.png"  alt="">
-                                <p>Clover Round 1</p>
+                                <p>{{\App\Models\Token::find($order->token_id)->name}}</p>
                             </div>
 
                             <div class="transaction__course">
-                                <span class="rate rate--minus"> 1000 USDT</span>
+                                <span class="rate rate--minus"> {{$order->price}} USDT</span>
 
                             </div>
                         </div>
 
-                        <div class="transaction__body">
+                       {{-- <div class="transaction__body">
                             <ul class="transaction__details">
                                 <li>
                                     <span>Token Price, $:</span> 0.25
@@ -114,83 +111,10 @@
                                     <span>Start hold:</span> June 30, 2020
                                 </li>
                             </ul>
-                        </div>
+                        </div>--}}
 
                     </div>
-
-                    <div class="transaction ">
-
-                        <div class="transaction__header transaction__header--three-cols">
-                            <div class="transaction__data">
-                                June 26, 2020
-                            </div>
-
-                            <div class="transaction__info">
-                                <img class="icon_tokin_sale" src="img/mina.png" alt="">
-                                <p>Mina Token </p>
-                            </div>
-
-                            <div class="transaction__course">
-                                <span class="rate rate--plus"> 4000 USDT</span>
-
-                            </div>
-                        </div>
-
-                        <div class="transaction__body">
-                            <ul class="transaction__details">
-                                <li>
-                                    <span>Token Price, $:</span> 0.25
-                                </li>
-                                <li>
-                                    <span>Total Tokens:</span> 16000
-                                </li>
-                                <li>
-                                    <span>Hold period :</span> 3 month
-                                </li>
-                                <li>
-                                    <span>Start hold:</span> June 30, 2020
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                    <div class="transaction ">
-
-                        <div class="transaction__header transaction__header--three-cols">
-                            <div class="transaction__data">
-                                June 26, 2020
-                            </div>
-
-                            <div class="transaction__info">
-                                <img class="icon_tokin_sale" src="img/mina.png" alt="">
-                                <p>Mina Token </p>
-                            </div>
-
-                            <div class="transaction__course">
-                                <span class="rate rate--minus"> 4000 USDT</span>
-
-                            </div>
-                        </div>
-
-                        <div class="transaction__body">
-                            <ul class="transaction__details">
-                                <li>
-                                    <span>Token Price, $:</span> 0.25
-                                </li>
-                                <li>
-                                    <span>Total Tokens:</span> 16000
-                                </li>
-                                <li>
-                                    <span>Hold period :</span> 3 month
-                                </li>
-                                <li>
-                                    <span>Start hold:</span> June 30, 2020
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
+                    @endforeach
                 </div>
             </section>
         </div>

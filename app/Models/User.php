@@ -80,4 +80,9 @@ class User extends Authenticatable
         return $this->belongsToMany(Wallet::class)
             ->withPivot(['balance','address']);
     }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

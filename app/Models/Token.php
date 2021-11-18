@@ -16,4 +16,9 @@ class Token extends Model
     protected $dates = [
         'start_date', 'end_date','hold_period'
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }
