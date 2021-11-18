@@ -36,11 +36,13 @@ class TokenSales extends Component
 
     public function confirm()
     {
+        //TODO:: fix this
         $order = new Order();
         $order->order_time = now();
         $order->price = $this->usdValue;
         $order->token_id = $this->selectedTokenId;
         $order->user_id = $this->user->id;
+        $order->status = 0; //Default
         $order->save();
 
         $this->totalBalance -= $this->usdValue;

@@ -125,7 +125,7 @@
 
 <!-- End Farm -->
 <li class="menu__item">
-    <a class="menu__link" href="transactions.html">
+    <a class="menu__link" href="{{route('transactions')}}">
 							<span class="menu__link-icon">
 								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      width="15.277px" height="12px" viewBox="18.361 16 15.277 12" style="enable-background:new 18.361 16 15.277 12;"

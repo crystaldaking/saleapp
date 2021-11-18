@@ -92,7 +92,6 @@
 
                             <div class="transaction__course">
                                 <span class="rate rate--minus"> {{$order->price}} USDT</span>
-
                             </div>
                         </div>
 

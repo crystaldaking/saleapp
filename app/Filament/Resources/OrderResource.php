@@ -20,7 +20,13 @@ class OrderResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Components\Select::make('status')->options([
+                    '0' => 'Created',
+                    '1' => 'Confirmed',
+                    '2' => 'Completed',
+                    '3' => 'Canceled',
+                    '4' => 'Returned'
+                ])->required()
             ]);
     }
 
@@ -32,6 +38,13 @@ class OrderResource extends Resource
                 Columns\Text::make('token.name')->searchable(),
                 Columns\Text::make('price'),
                 Columns\Text::make('order_time'),
+                Columns\Text::make('status')->options([
+                    '0' => 'Created',
+                    '1' => 'Confirmed',
+                    '2' => 'Completed',
+                    '3' => 'Canceled',
+                    '4' => 'Returned'
+                ])->searchable()
             ])
             ->filters([
                 //
