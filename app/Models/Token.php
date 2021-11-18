@@ -10,7 +10,7 @@ class Token extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name','short_name','price','start_date','end_date','hold_period'
+        'name','short_name','price','start_date','end_date','hold_period','image_path'
     ];
 
     protected $dates = [

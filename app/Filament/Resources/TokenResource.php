@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\TokenResource\Pages;
 use App\Filament\Resources\TokenResource\RelationManagers;
 use App\Filament\Roles;
+use Filament\Forms\Components\FileUpload;
 use Filament\Resources\Forms\Components;
 use Filament\Resources\Forms\Form;
 use Filament\Resources\Resource;
@@ -26,6 +27,7 @@ class TokenResource extends Resource
                 Components\DatePicker::make('start_date')->required(),
                 Components\DatePicker::make('end_date')->required(),
                 Components\DatePicker::make('hold_period')->required(),
+                Components\FileUpload::make('image_path')->required()->image()
             ]);
     }
 

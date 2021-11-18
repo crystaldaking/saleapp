@@ -86,7 +86,7 @@
                             </div>
 
                             <div class="transaction__info">
-                                <img   class="icon_tokin_sale" src="img/clover.png"  alt="">
+                                <img   class="icon_tokin_sale" src="{{asset('storage/'.\App\Models\Token::find($order->token_id)->image_path)}}"  alt="">
                                 <p>{{\App\Models\Token::find($order->token_id)->name}}</p>
                             </div>
 

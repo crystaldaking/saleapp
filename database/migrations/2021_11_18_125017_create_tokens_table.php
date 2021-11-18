@@ -21,6 +21,7 @@ class CreateTokensTable extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->date('hold_period');
+            $table->string('image_path');
             $table->timestamps();
         });
     }
