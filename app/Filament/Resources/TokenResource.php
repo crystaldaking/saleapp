@@ -27,6 +27,8 @@ class TokenResource extends Resource
                 Components\DatePicker::make('start_date')->required(),
                 Components\DatePicker::make('end_date')->required(),
                 Components\DatePicker::make('hold_period')->required(),
+                Components\TextInput::make('view_url')->required(),
+                Components\Textarea::make('description')->required(),
                 Components\FileUpload::make('image_path')->required()->image()
             ]);
     }
@@ -41,6 +43,7 @@ class TokenResource extends Resource
                 Columns\Text::make('start_date')->searchable(),
                 Columns\Text::make('end_date')->searchable(),
                 Columns\Text::make('hold_period')->searchable(),
+                Columns\Text::make('view_url')
             ])
             ->filters([
                 //

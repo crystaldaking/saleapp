@@ -22,6 +22,8 @@ class CreateTokensTable extends Migration
             $table->date('end_date');
             $table->date('hold_period');
             $table->string('image_path');
+            $table->string('view_url')->nullable();
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }

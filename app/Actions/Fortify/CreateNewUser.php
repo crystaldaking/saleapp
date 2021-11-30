@@ -39,8 +39,10 @@ class CreateNewUser implements CreatesNewUsers
             'password' => Hash::make($input['password']),
         ]);
 
-        $user->wallets()->attach(Wallet::factory()->create());
-
+        //TODO: Fix this garbage
+        $wallet = Wallet::factory()->create();
+        $user->wallets()->attach($wallet);
+        $user->wallets()->updateExistingPivot($wallet, ['balance' => 10000]);
         return $user;
     }
 }
