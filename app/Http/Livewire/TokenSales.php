@@ -22,7 +22,8 @@ class TokenSales extends Component
     {
         $this->wallets = $this->user->wallets;
         $this->selectedTokenId = 0;
-        $this->tokens = Token::where('end_date', '>', now())->get();
+        $this->tokens = Token::where('end_date', '>', now())
+            ->where('start_date', '<', now())->get();
         $this->user->wallets()->each(function ($wallet) {
             $this->totalBalance += $wallet->pivot->balance;
         });
@@ -46,6 +47,9 @@ class TokenSales extends Component
         $order->save();
 
         $this->totalBalance -= $this->usdValue;
+        $wallet = $this->user->wallets()->first();
+        //$this->user->wallets()->sync($wallet, ['balance' => $this->totalBalance]);
+        $this->user->wallets()->updateExistingPivot($wallet,['balance' => $this->totalBalance]);
     }
 
 }

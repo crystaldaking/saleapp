@@ -19,9 +19,5 @@ class DatabaseSeeder extends Seeder
             WalletSeeder::class,
             ModelRelationSeeder::class
         ]);
-
-        User::factory()->create(
-            ['email' => 'dev@tass.by']
-        );
     }
 }

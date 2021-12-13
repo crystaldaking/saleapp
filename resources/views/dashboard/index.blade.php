@@ -206,72 +206,14 @@
 
             <section class="transactions">
                 <h3>Active now</h3>
-
                 <div class="transactions__list">
-                    <div class="transaction">
-
-                        <div class="transaction__header transaction__header--five-cols">
-                            <div class="transaction__data">
-                                June 26
-                            </div>
-
-                            <div class="transaction__currency">
-                                <img   class="icon_tokin_sale" src="img/clover.png"  alt="">
-                                Clover Sale Registration Now Open
-                            </div>
-
-                            <div class="transaction__info">
-
-                                Registration Open Now · Sale Begins April 20 · US, Canada, China excluded
-                            </div>
-
-                            <div  class="buy_btn_blue learn_more_tokin_div" >
-                                <a  style="color: #ffffff;" href="" class="">View</a>
-                            </div>
-                            <div  class="buy_btn_green learn_more_tokin_div " >
-                                <a  href="token_sales.html" class="learn_more_tokin ">Order</a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="transaction__header transaction__header--five-cols">
-                            <div class="transaction__data">
-                                June 26
-                            </div>
-
-                            <div class="transaction__currency">
-                                <img   class="icon_tokin_sale" src="img/clover.png"  alt="">
-                                Clover Sale Registration Now Open
-                            </div>
-
-                            <div class="transaction__info">
-
-                                Registration Open Now · Sale Begins April 20 · US, Canada, China excluded
-                            </div>
-
-                            <div  class="buy_btn_blue learn_more_tokin_div" >
-                                <a  href="" class="learn_more_tokin">View</a>
-
-                            </div>
-                            <div  class="buy_btn_green learn_more_tokin_div" >
-                                <a  href="token_sales.html" class="learn_more_tokin">Order</a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
+                    @livewire('show-active-tokens')
                 </div>
-
-                <!-- <a href="" class="btn btn--blue">All transactions</a> -->
             </section>
 
             <!-- past activ -->
 
-            <section class="transactions">
+           {{-- <section class="transactions">
                 <h3>Past sales</h3>
 
                 <div class="transactions__list">
@@ -325,9 +267,7 @@
                 </div>
 
                 <!-- <a href="" class="btn btn--blue">All transactions</a> -->
-            </section>
-
-
+            </section>--}}
         </main>
     </div>
 
