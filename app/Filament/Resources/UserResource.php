@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
 use App\Filament\Roles;
+use App\Models\User;
 use Filament\Resources\Forms\Components;
 use Filament\Resources\Forms\Form;
 use Filament\Resources\Resource;
@@ -22,6 +23,7 @@ class UserResource extends Resource
             ->schema([
                 Components\TextInput::make('name')->autofocus()->required(),
                 Components\TextInput::make('email')->required(),
+                Components\TextInput::make('password')->password()->disableAutocomplete()
             ]);
     }
 
@@ -29,8 +31,10 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
+                Columns\Text::make('id')->searchable(),
                 Columns\Text::make('name')->searchable(),
                 Columns\Text::make('email')->searchable(),
+                Columns\Text::make('balance')->getValueUsing(fn($record) => $record->getBalance()),
                 Columns\Text::make('created_at')
             ])
             ->filters([

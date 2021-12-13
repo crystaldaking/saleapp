@@ -85,4 +85,13 @@ class User extends Authenticatable
     {
         return $this->hasMany(Order::class);
     }
+
+    public function getBalance()
+    {
+        $totalBalance = 0;
+        $this->wallets()->each(function ($wallet) use (&$totalBalance) {
+            $totalBalance += $wallet->pivot->balance;
+        });
+        return $totalBalance;
+    }
 }
