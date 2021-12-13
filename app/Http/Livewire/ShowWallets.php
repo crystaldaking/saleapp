@@ -15,9 +15,7 @@ class ShowWallets extends Component
     public function render()
     {
         $this->wallets = $this->user->wallets;
-        $this->user->wallets()->each(function ($wallet) {
-            $this->totalBalance += $wallet->pivot->balance;
-        });
+        $this->totalBalance = $this->user->getBalance();
         return view('livewire.show-wallets');
     }
 }
